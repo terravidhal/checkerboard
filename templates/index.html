@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- linking a css style sheet -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <title>checkerboard</title>
+  <style>
+    .cases.color0 {
+      background-color: {{color0}};
+    }
+    .cases.color1 {
+      background-color: {{color1}};
+    }
+  </style>
+</head>
+<body>
+  <h1>*** checkerboard ***</h1>
+  <div id="container">
+    {% for x in range (0,num_lines) %}
+    <div class="lines n-{{x}}">
+      {% for y in range (0,num_cases) %}
+      <div class="cases color{{(x + y)%2}}"></div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </div>
+  {# a comment #}
+</body>
+</html>

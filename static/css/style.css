@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  #container {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  .cases {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    margin: -1px;
+  }
+  
